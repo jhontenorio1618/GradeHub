@@ -1,5 +1,4 @@
 package com.github.gradehub.repositories;
-
 import com.github.gradehub.entities.Course;
 import com.github.gradehub.entities.Users;
 import com.github.gradehub.entities.Role;
@@ -8,11 +7,9 @@ import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTest;
 import org.springframework.test.context.ActiveProfiles;
-
 import java.time.LocalDate;
 import java.util.List;
 import java.util.Optional;
-
 import static org.assertj.core.api.Assertions.assertThat;
 
 @DataJpaTest
