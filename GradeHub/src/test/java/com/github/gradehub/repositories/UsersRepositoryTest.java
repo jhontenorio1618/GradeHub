@@ -72,63 +72,43 @@ public class UsersRepositoryTest {
         assertThat(retrievedUser.get().getEmail()).isEqualTo("jane.smith@example.com");
     }
 
-    @Test
-    public void testFindUsersByCourseId() {
-        // Arrange: Create and save a teacher
-        Users teacher = Users.builder()
-                .personName("Professor")
-                .personLastName("Xoo")
-                .email("professor.x@example.com")
-                .role(Role.INSTRUCTOR)
-                .dob(LocalDate.of(1970, 7, 20))
-                .password("xsecurepassword")
+    private Users createUser(String name, String lastName, String email, Role role, LocalDate dob) {
+        Users user = Users.builder()
+                .personName(name)
+                .personLastName(lastName)
+                .email(email)
+                .role(role)
+                .dob(dob)
+                .password("securepassword")
                 .build();
-        usersRepository.save(teacher);
+        return usersRepository.save(user);
+    }
 
-        // Arrange: Create and save students
-        Users student1 = Users.builder()
-                .personName("Student")
-                .personLastName("One")
-                .email("student.one@example.com")
-                .role(Role.STUDENT)
-                .dob(LocalDate.of(2000, 1, 10))
-                .password("studentpassword1")
-                .build();
-
-        Users student2 = Users.builder()
-                .personName("Student")
-                .personLastName("Two")
-                .email("student.two@example.com")
-                .role(Role.STUDENT)
-                .dob(LocalDate.of(2000, 2, 15))
-                .password("studentpassword2")
-                .build();
-
-        usersRepository.save(student1);
-        usersRepository.save(student2);
-
-        // Arrange: Create and save a course
+    private Course createCourse(String courseName, Users teacher, List<Users> students) {
         Course course = Course.builder()
-                .courseName("X-Men Studies")
+                .courseName(courseName)
                 .description("Learn to use mutant powers responsibly.")
                 .teacher(teacher)
-                .students(List.of(student1, student2))
+                .students(students)
                 .build();
+        return courseRepository.save(course);
+    }
 
-        // Set the course for each student
-        student1.setCourses(List.of(course));
-        student2.setCourses(List.of(course));
-        courseRepository.save(course);
+    @Test
+    public void testFindUsersByCourseId() {
 
-        // Act: Call the repository method
+        Users teacher = createUser("Professor", "Xoo", "professor.x@example.com", Role.INSTRUCTOR, LocalDate.of(1970, 7, 20));
+        Users student1 = createUser("Student", "One", "student.one@example.com", Role.STUDENT, LocalDate.of(2000, 1, 10));
+        Users student2 = createUser("Student", "Two", "student.two@example.com", Role.STUDENT, LocalDate.of(2000, 2, 15));
+
+        Course course = createCourse("X-Men Studies", teacher, List.of(student1, student2));
+
         List<Users> usersInCourse = usersRepository.findUsersByCourseId(course.getCourseId());
 
-        // Assert: Verify the results
-        assertThat(usersInCourse).hasSize(2); // Two students should be enrolled
+
+        assertThat(usersInCourse).hasSize(2);
         assertThat(usersInCourse).extracting("personName")
                 .containsExactlyInAnyOrder("Student", "Student");
     }
-
-
 
 }
