@@ -34,7 +34,7 @@ public class UsersRepositoryTest {
     public void testFindByEmail() {
         // Arrange: Create and save a user
         Users user = Users.builder()
-                .personName("John")
+                .personFirstName("John")
                 .personLastName("Doe")
                 .email("john.doe@example.com")
                 .role(Role.INSTRUCTOR)
@@ -48,7 +48,7 @@ public class UsersRepositoryTest {
 
         // Assert: Verify the result
         assertThat(retrievedUser).isPresent();
-        assertThat(retrievedUser.get().getPersonName()).isEqualTo("John");
+        assertThat(retrievedUser.get().getPersonFirstName()).isEqualTo("John");
         assertThat(retrievedUser.get().getPersonLastName()).isEqualTo("Doe");
     }
 
@@ -56,7 +56,7 @@ public class UsersRepositoryTest {
     public void testFindByNameAndLastName() {
         // Arrange: Create and save a user
         Users user = Users.builder()
-                .personName("Jane")
+                .personFirstName("Jane")
                 .personLastName("Smith")
                 .email("jane.smith@example.com")
                 .role(Role.INSTRUCTOR)
@@ -75,7 +75,7 @@ public class UsersRepositoryTest {
 
     private Users createUser(String name, String lastName, String email, Role role, LocalDate dob) {
         Users user = Users.builder()
-                .personName(name)
+                .personFirstName(name)
                 .personLastName(lastName)
                 .email(email)
                 .role(role)
@@ -108,7 +108,7 @@ public class UsersRepositoryTest {
 
 
         assertThat(usersInCourse).hasSize(2);
-        assertThat(usersInCourse).extracting("personName")
+        assertThat(usersInCourse).extracting("personFirstName")
                 .containsExactlyInAnyOrder("Student", "Student");
     }
 

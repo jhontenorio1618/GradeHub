@@ -7,9 +7,7 @@ import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;
 import org.springframework.stereotype.Repository;
-
 import java.time.LocalDate;
-import java.util.List;
 
 @Repository
 public interface AssignmentRepository extends JpaRepository<Assignment, Long> {
@@ -18,15 +16,13 @@ public interface AssignmentRepository extends JpaRepository<Assignment, Long> {
     Page<Assignment> findAssignmentsByCourseId(@Param("courseId") Long courseId, Pageable pageable);
 
     @Query("SELECT a FROM Assignment a WHERE a.assignmentName LIKE %:name%")
-    List<Assignment> findAssignmentsByName(@Param("name") String name);
-
-    @Query("SELECT COUNT(a) FROM Assignment a WHERE a.course.courseId = :courseId")
-    Long countAssignmentsByCourseId(@Param("courseId") Long courseId);
+    Page<Assignment> findAssignmentsByName(@Param("name") String name, Pageable pageable);
 
     @Query("SELECT a FROM Assignment a WHERE a.dueDate > :date")
-    List<Assignment> findAssignmentsDueAfter(@Param("date") LocalDate date);
+    Page<Assignment> findAssignmentsDueAfter(@Param("date") LocalDate date, Pageable pageable);
 
+    // Count assignments by course ID
+    @Query("SELECT COUNT(a) FROM Assignment a WHERE a.course.courseId = :course_id")
+    Long countAssignmentsByCourseId(@Param("course_id") Long courseId);
 
-
-
-}
+    }

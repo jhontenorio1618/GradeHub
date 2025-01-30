@@ -8,14 +8,20 @@ import lombok.NoArgsConstructor;
 
 @Data
 @NoArgsConstructor
-@Table(name = "grade")
+@Table(name = "grade",
+        indexes = {
+                @Index(name = "idx_assignment_id", columnList = "assignment_id"),
+                @Index(name = "idx_user_id", columnList = "user_id"),
+                @Index(name = "idx_score", columnList = "score")
+        }
+)
 @Entity
 public class Grade {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    @Column(name = "gradeID", nullable = false, updatable = false)
-    private long gradeID;
+    @Column(name = "grade_id", nullable = false, updatable = false)
+    private long gradeId;
 
     @Min(value = 0, message = "Score must be at least 0")
     @Max(value = 100, message = "Score must not exceed 100")
@@ -23,11 +29,10 @@ public class Grade {
     private Float score;
 
     @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "userID", nullable = false)
-    private User user;
+    @JoinColumn(name = "user_id", nullable = false)
+    private Users user;
 
     @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "assignmentID", nullable = false)
+    @JoinColumn(name = "assignment_id", nullable = false)
     private Assignment assignment;
-
 }

@@ -12,19 +12,14 @@ import java.util.List;
 public interface CourseRepository extends JpaRepository<Course, Long> {
 
     // Find courses by teacher
-    @Query("SELECT c FROM Course c WHERE c.teacher.usersId = :usersId AND c.teacher.role = 'INSTRUCTOR'")
-    List<Course> findCoursesByTeacherId(@Param("usersId") Long usersId);
+    @Query("SELECT c FROM Course c WHERE c.teacher.userId = :userId AND c.teacher.role = 'INSTRUCTOR'")
+    List<Course> findCoursesByTeacherId(@Param("userId") Long userId);
 
     // Find courses by student
-    @Query("SELECT c FROM Course c JOIN c.students s WHERE s.usersId = :usersId AND s.role = 'STUDENT'")
-    List<Course> findCoursesByStudentId(@Param("usersId") Long usersId);
+    @Query("SELECT c FROM Course c JOIN c.students s WHERE s.userId = :userId AND s.role = 'STUDENT'")
+    List<Course> findCoursesByStudentId(@Param("userId") Long userId);
 
     // Count courses by teacher
-    @Query("SELECT COUNT(c) FROM Course c WHERE c.teacher.usersId = :usersId AND c.teacher.role = 'INSTRUCTOR'")
-    Long countCoursesByTeacherId(@Param("usersId") Long usersId);
-
-
-
-
+    @Query("SELECT COUNT(c) FROM Course c WHERE c.teacher.userId = :userId AND c.teacher.role = 'INSTRUCTOR'")
+    Long countCoursesByTeacherId(@Param("userId") Long userId);
 }
-
