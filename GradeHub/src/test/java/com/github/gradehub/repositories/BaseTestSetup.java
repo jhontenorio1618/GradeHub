@@ -47,8 +47,8 @@ public abstract class BaseTestSetup {
 
     private void initializeTestData() {
         initializeUsers();
-        initializeCourses();
-        initializeAssignments();
+        createCourse();
+        createAssignment();
     }
 
 
@@ -71,7 +71,7 @@ public abstract class BaseTestSetup {
 
     }
 
-    private void initializeCourses(){
+    protected void createCourse(){
         course = courseRepository.save(
                 Course.builder()
                         .courseName("COMP 324")
@@ -81,7 +81,18 @@ public abstract class BaseTestSetup {
                         .build()
         );
     }
-    public void initializeAssignments(){
+
+    protected Course createCourse(String courseName, Users teacher, List<Users> students) {
+        course = courseRepository.save(
+                Course.builder()
+                        .courseName(courseName)
+                        .teacher(teacher)
+                        .students(students)
+                        .build()
+        );
+        return course;
+    }
+    protected void createAssignment(){
         assignment = assignmentRepository.save(
                 Assignment.builder()
                         .assignmentName("Quiz 1")
@@ -103,6 +114,8 @@ public abstract class BaseTestSetup {
         grade2 = gradeRepository.save(
                 Grade.builder().score(12.00).user(student2).assignment(assignment).build());
     }
+
+
 
 
 
