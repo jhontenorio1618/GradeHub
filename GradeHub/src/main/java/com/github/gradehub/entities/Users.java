@@ -17,7 +17,7 @@ import java.util.List;
 @Table(name = "users",
         indexes = {
                 @Index(name = "idx_person_name", columnList = "person_first_name, person_last_name"),
-                @Index(name = "idx_email", columnList = "email")
+                @Index(name = "idx_email", columnList = "email", unique = true)
         }
 )
 public class Users {

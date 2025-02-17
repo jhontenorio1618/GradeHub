@@ -25,5 +25,4 @@ public interface CourseGradeRepository extends JpaRepository<CourseGrade, Long> 
     @Query("SELECT cg FROM CourseGrade cg WHERE cg.course.courseId = :course_id")
     Page<CourseGrade> findGradesByCourseId(@Param("course_id") Long courseId, Pageable pageable);
 
-    Double calculateCourseGrade(Users user, Course courseId);
 }

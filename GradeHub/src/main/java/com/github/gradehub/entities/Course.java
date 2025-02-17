@@ -17,7 +17,7 @@ import java.util.List;
         name = "course",
         indexes = {
                 @Index(name = "idx_course_name", columnList = "course_name"),
-                @Index(name = "idx_teacher_id", columnList = "user_id")
+                @Index(name = "idx_teacher_id", columnList = "user_id", unique = true)
         }
 )
 @Entity
