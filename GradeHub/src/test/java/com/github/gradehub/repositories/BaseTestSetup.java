@@ -104,8 +104,17 @@ public abstract class BaseTestSetup {
                         .build()
         );
     }
-
-    public void initializeGrades(){
+    protected Assignment createAssignment(String assignmentName, double assignmentWeight, LocalDate assignmentPostedDate, LocalDate assignmentDueDate) {
+        Assignment assignment = assignmentRepository.save(
+                Assignment.builder().assignmentName(assignmentName)
+                        .assignmentWeight(0.3)
+                        .assignmentPostedDate(assignmentPostedDate)
+                        .dueDate(assignmentDueDate)
+                        .build()
+        );
+        return assignment;
+    }
+    protected void initializeGrades(){
         grade1 = gradeRepository.save(
                 Grade.builder().score(90.00).user(student1).
                         assignment(assignment).
@@ -114,10 +123,4 @@ public abstract class BaseTestSetup {
         grade2 = gradeRepository.save(
                 Grade.builder().score(12.00).user(student2).assignment(assignment).build());
     }
-
-
-
-
-
-
 }

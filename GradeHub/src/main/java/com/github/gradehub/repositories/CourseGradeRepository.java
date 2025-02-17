@@ -1,6 +1,8 @@
 package com.github.gradehub.repositories;
 
+import com.github.gradehub.entities.Course;
 import com.github.gradehub.entities.CourseGrade;
+import com.github.gradehub.entities.Users;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.jpa.repository.JpaRepository;
@@ -22,4 +24,6 @@ public interface CourseGradeRepository extends JpaRepository<CourseGrade, Long> 
     // Get all grades for a specific course with pagination
     @Query("SELECT cg FROM CourseGrade cg WHERE cg.course.courseId = :course_id")
     Page<CourseGrade> findGradesByCourseId(@Param("course_id") Long courseId, Pageable pageable);
+
+    Double calculateCourseGrade(Users user, Course courseId);
 }

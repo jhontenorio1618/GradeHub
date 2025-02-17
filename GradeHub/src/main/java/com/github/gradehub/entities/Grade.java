@@ -3,10 +3,14 @@ package com.github.gradehub.entities;
 import jakarta.persistence.*;
 import jakarta.validation.constraints.Max;
 import jakarta.validation.constraints.Min;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
 @Data
+@AllArgsConstructor
+@Builder
 @NoArgsConstructor
 @Table(name = "grade",
         indexes = {
@@ -26,7 +30,7 @@ public class Grade {
     @Min(value = 0, message = "Score must be at least 0")
     @Max(value = 100, message = "Score must not exceed 100")
     @Column(name = "score", nullable = false)
-    private Float score;
+    private Double score;
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "user_id", nullable = false)

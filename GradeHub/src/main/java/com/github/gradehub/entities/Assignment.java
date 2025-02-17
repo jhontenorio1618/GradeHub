@@ -38,6 +38,7 @@ public class Assignment {
     @Column(name = "assignment_name", nullable = false)
     private String assignmentName;
 
+    //Cannot be greater than 1 since this calculation represents percentages.
     @Column(name = "assignment_weight", nullable = false)
     @Min(value = 0, message = "Weight must be at least 0")
     @Max(value = 1, message = "Weight must not exceed 1")
