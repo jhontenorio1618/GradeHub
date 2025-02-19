@@ -10,7 +10,7 @@ import java.util.List;
 
 @DataJpaTest
 @ActiveProfiles("test")
-public abstract class BaseTestSetup {
+public abstract class BaseTestSetup{
 
     @Autowired
     protected UsersRepository usersRepository;

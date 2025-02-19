@@ -1,19 +1,13 @@
-
 package com.github.gradehub.repositories;
-
 import com.github.gradehub.entities.Course;
 import com.github.gradehub.entities.Role;
 import com.github.gradehub.entities.Users;
-import org.h2.engine.User;
-import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTest;
-
 import java.time.LocalDate;
 import java.util.List;
 import java.util.Optional;
-
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.junit.jupiter.api.Assertions.assertFalse;
 import static org.junit.jupiter.api.Assertions.assertTrue;
