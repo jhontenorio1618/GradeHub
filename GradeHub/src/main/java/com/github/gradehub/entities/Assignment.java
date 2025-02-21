@@ -30,7 +30,7 @@ import java.util.List;
 public class Assignment {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(unique = true, name = "assignment_id")
     private long assignmentId;
 
