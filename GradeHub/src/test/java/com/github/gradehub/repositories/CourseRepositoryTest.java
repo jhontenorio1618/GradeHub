@@ -50,6 +50,12 @@ public class CourseRepositoryTest extends BaseTestSetup{
         assertThat(courseRepository.findCoursesByTeacherId(professor.getUserId()).size() == 2).isTrue();
     }
 
+    @Test
+    public void countNumberOfStudents(){
+        Long courseid = course.getCourseId();
+        assertThat(courseRepository.countNumberOfStudents(courseid) == 2).isTrue();
+    }
+
 
 
 }
