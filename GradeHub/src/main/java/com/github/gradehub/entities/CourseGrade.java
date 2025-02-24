@@ -13,8 +13,8 @@ import lombok.NoArgsConstructor;
 @Table(
         name = "course_grade",
         indexes = {
-                @Index(name = "idx_course_user", columnList = "course_id, user_id", unique = true), // Best for student-course lookups
-                @Index(name = "idx_user_id", columnList = "user_id", unique = true)
+                @Index(name = "idx_course_user", columnList = "course_id, user_id"), // Best for student-course lookups
+                @Index(name = "idx_user_id", columnList = "user_id")
         }
 
 )

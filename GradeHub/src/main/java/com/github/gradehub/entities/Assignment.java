@@ -22,6 +22,7 @@ import java.util.List;
         name = "assignment",
         indexes = {
                 @Index(name = "idx_assignment_name", columnList = "assignment_name"), // Search by name
+                @Index(name = "idx_assignment_id", columnList = "assignment_id"), // Search by name
                 //@Index(name = "idx_course_id", columnList = "course_id"), // Search assignments by course
                 @Index(name = "idx_due_date", columnList = "due_date") // Search by due date
         }

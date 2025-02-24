@@ -14,8 +14,8 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @Table(name = "grade",
         indexes = {
-                @Index(name = "idx_assignment_id", columnList = "assignment_id", unique = true),
-                @Index(name = "idx_user_id", columnList = "user_id", unique = true),
+                @Index(name = "idx_assignment_id", columnList = "assignment_id"),
+                @Index(name = "idx_user_id", columnList = "user_id"),
                 @Index(name = "idx_score", columnList = "score")
         }
 )

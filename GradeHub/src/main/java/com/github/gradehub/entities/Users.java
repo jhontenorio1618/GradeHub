@@ -17,7 +17,7 @@ import java.util.List;
 @Table(name = "users",
         indexes = {
                 @Index(name = "idx_person_name", columnList = "person_first_name, person_last_name"),
-                @Index(name = "idx_email", columnList = "email", unique = true)
+                @Index(name = "idx_email", columnList = "email")
         }
 )
 public class Users {
@@ -54,7 +54,7 @@ public class Users {
     private String email;
 
     @NotBlank
-    @Size(min = 12, max = 50)
+    @Size(min = 12, max = 100)
     @Column(name = "password", nullable = false)
     private String password;
 
