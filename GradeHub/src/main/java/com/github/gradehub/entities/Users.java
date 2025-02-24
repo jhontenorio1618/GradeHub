@@ -22,7 +22,7 @@ import java.util.List;
 )
 public class Users {
 
-    // TODO: Implement password encryption before deployment
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "user_id", nullable = false, unique = true, updatable = false)
