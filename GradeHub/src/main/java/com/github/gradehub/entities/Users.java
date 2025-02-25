@@ -58,6 +58,8 @@ public class Users {
     @Column(name = "password", nullable = false)
     private String password;
 
+    @Column(name = "grade_level")
+    private int gradeLevel;
 
     @ManyToMany(mappedBy = "students", cascade = {CascadeType.PERSIST, CascadeType.MERGE}, fetch = FetchType.LAZY)
     private List<Course> courses;

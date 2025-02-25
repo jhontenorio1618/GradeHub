@@ -18,6 +18,8 @@ public interface UsersRepository extends JpaRepository<Users, Long> {
     @Query("SELECT u FROM Users u WHERE u.email = :email")
     Optional<Users> findByEmail(@Param("email") String email);
 
+    boolean existsByEmail(String email);
+
     // Find users by name and last name
     @Query("SELECT u FROM Users u WHERE u.personFirstName = :person_first_name AND u.personLastName = :person_last_name")
     Optional<Users> findByNameAndLastName(@Param("person_first_name") String name, @Param("person_last_name") String lastName);
