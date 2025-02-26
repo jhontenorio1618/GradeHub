@@ -1,5 +1,6 @@
 package com.github.gradehub.repositories;
 
+import com.github.gradehub.entities.Role;
 import com.github.gradehub.entities.Users;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
@@ -17,6 +18,7 @@ public interface UsersRepository extends JpaRepository<Users, Long> {
     // Find users by email
     @Query("SELECT u FROM Users u WHERE u.email = :email")
     Optional<Users> findByEmail(@Param("email") String email);
+
 
     boolean existsByEmail(String email);
 

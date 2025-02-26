@@ -31,16 +31,18 @@ public class UserService {
         user.setEmail(emailService.emailGenerated(user));
         return usersRepository.save(user);
     }
-
+    // TODO: SET UP PERMISSIONS
     public boolean deleteUsers(Users user ) {
         if (!usersRepository.existsById(user.getUserId())) {
             return false; // No user found to delete
         }
         usersRepository.deleteById(user.getUserId());
+
         return !usersRepository.existsById(user.getUserId()); // Confirm deletion
     }
 
-    public List<Users> getAllUsers(){
+    // TODO: SET UP PERMISSIONS
+    public List<Users> getAllUsers(Users user) {
         return usersRepository.findAll();
     }
 

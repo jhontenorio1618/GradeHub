@@ -2,10 +2,8 @@ package com.github.gradehub.entities;
 
 import jakarta.persistence.*;
 import jakarta.validation.constraints.*;
-import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import lombok.*;
+
 import java.time.LocalDate;
 import java.util.List;
 
@@ -20,6 +18,8 @@ import java.util.List;
                 @Index(name = "idx_email", columnList = "email")
         }
 )
+@Getter
+@Setter
 public class Users {
 
 
@@ -40,10 +40,6 @@ public class Users {
     @Column(name = "person_last_name", nullable = false)
     private String personLastName;
 
-    @Enumerated(EnumType.STRING)
-    @Column(name = "role", nullable = false)
-    private Role role;
-
     @Past(message = "Date of birth must be in the past")
     @Column(name = "dob", nullable = false)
     private LocalDate dob;
@@ -61,6 +57,10 @@ public class Users {
     @Column(name = "grade_level")
     private int gradeLevel;
 
+    @ManyToOne
+    @JoinColumn(name = "role_id", nullable = false)
+    private Role role;
+
     @ManyToMany(mappedBy = "students", cascade = {CascadeType.PERSIST, CascadeType.MERGE}, fetch = FetchType.LAZY)
     private List<Course> courses;
 
@@ -73,4 +73,6 @@ public class Users {
 
     @OneToMany(mappedBy = "user", fetch = FetchType.LAZY)
     private List<CourseGrade> courseGrades;
+
+
 }

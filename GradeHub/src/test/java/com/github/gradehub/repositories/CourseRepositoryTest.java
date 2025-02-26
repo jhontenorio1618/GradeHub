@@ -7,8 +7,11 @@ import com.github.gradehub.entities.Users;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTest;
+import org.springframework.test.context.ActiveProfiles;
+
 import java.util.List;
 
+@ActiveProfiles("test")
 @DataJpaTest
 public class CourseRepositoryTest extends BaseTestSetup{
 
@@ -30,10 +33,13 @@ public class CourseRepositoryTest extends BaseTestSetup{
     }
 
     @Test
-    public void findCoursesByTeacherId(){
+    public void findCoursesByTeacherId() {
         List<Course> courses = courseRepository.findCoursesByTeacherId(professor.getUserId());
+
         assertThat(courses).isNotEmpty();
+        assertThat(courses).hasSize(1); // Check the number of courses
         assertThat(courses).extracting(Course::getCourseName).contains("COMP 324");
+        assertThat(courses).allMatch(course -> course.getTeacher().getUserId().equals(professor.getUserId())); // Check teacher
     }
 
     @Test

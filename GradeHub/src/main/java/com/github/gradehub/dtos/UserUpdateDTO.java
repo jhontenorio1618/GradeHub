@@ -1,5 +1,6 @@
 package com.github.gradehub.dtos;
 
+import com.github.gradehub.entities.Role;
 import jakarta.persistence.Column;
 import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotBlank;
@@ -21,4 +22,6 @@ public class UserUpdateDTO {
 
     @Size(min = 12, max = 100, message = "Password must be between 12 and 100 characters")
     private String password;
+
+    private Role role;
 }

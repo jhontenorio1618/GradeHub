@@ -78,13 +78,13 @@ public class AssignmentRepositoryTest extends BaseTestSetup{
         assertThat(course.getDescription()).isEqualTo("INTRO TO WEB DEVELOPMENT AND DESIGN");
     }
 
+
     @Test
     public void validateStudents() {
         List<Users> students = List.of(
-                createUser("Samuel", "Gonzales", "sgonzales1@email.com", Role.STUDENT, LocalDate.of(2001, 5, 10)),
-                createUser("Eric", "Johnson", "ejohnson1@email.com", Role.STUDENT, LocalDate.of(2000, 8, 22))
+                createUser("Samuel", "Gonzales", "sgonzales1@email.com", studentRole, LocalDate.of(2001, 5, 10)),
+                createUser("Eric", "Johnson", "ejohnson1@email.com", studentRole, LocalDate.of(2000, 8, 22))
         );
-
         assertThat(students).isNotEmpty();
         assertThat(students).hasSize(2);
 
