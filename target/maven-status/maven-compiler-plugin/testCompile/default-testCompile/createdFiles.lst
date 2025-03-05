@@ -1,0 +1,9 @@
+com/github/gradehub/repositories/BaseTestSetup.class
+com/github/gradehub/services/unitTests/UserServiceTest.class
+com/github/gradehub/repositories/UsersRepositoryTest.class
+com/github/gradehub/services/unitTests/AuthorizationService.class
+com/github/gradehub/repositories/CourseRepositoryTest.class
+com/github/gradehub/services/ServiceBaseTest.class
+com/github/gradehub/services/unitTests/EmailServiceTest.class
+com/github/gradehub/repositories/AssignmentRepositoryTest.class
+com/github/gradehub/GradeHubApplicationTests.class
