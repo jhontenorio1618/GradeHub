@@ -30,10 +30,8 @@ jobs:
         cache: maven
 
     - name: Build with Maven
-      run: mvn -B package --file pom.xml
-      working-directory: gradehub  
+      run: cd gradehub && mvn -B package --file pom.xml  # ✅ Correct way to set working directory
 
-    # Optional: Upload Maven dependency graph for better security insights
+    # Optional: Remove this if it still fails
     - name: Update dependency graph
       uses: advanced-security/maven-dependency-submission-action@v4
-      working-directory: gradehub  
