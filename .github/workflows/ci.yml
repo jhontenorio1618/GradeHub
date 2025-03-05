@@ -29,11 +29,14 @@ jobs:
         distribution: 'temurin'
         cache: maven
 
-    - name: Build with Maven
-      run: mvn -B package --file pom.xml
-      working-directory: gradehub  
+    - name: Debug - Show Repository Structure
+      run: ls -R 
 
-    # Optional: Upload Maven dependency graph for better security insights
+    - name: Build with Maven
+      working-directory: Gradehub/Gradehub  
+      run: mvn -B package --file pom.xml
+
+    
     - name: Update dependency graph
+      working-directory: Gradehub/Gradehub  
       uses: advanced-security/maven-dependency-submission-action@v4
-      working-directory: gradehub  
