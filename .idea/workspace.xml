@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="00f9a1c3-f0c4-4667-a9a5-24904a8d7742" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/target/classes/com/github/gradehub/GradeHubApplication.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/github/gradehub/GradeHubApplication.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/github/gradehub/config/SecurityConfiguration.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/github/gradehub/config/SecurityConfiguration.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/github/gradehub/dtos/PasswordChangeDTO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/github/gradehub/dtos/PasswordChangeDTO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/github/gradehub/dtos/UserUpdateDTO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/github/gradehub/dtos/UserUpdateDTO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/github/gradehub/entities/Assignment$AssignmentBuilder.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/github/gradehub/entities/Assignment$AssignmentBuilder.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/github/gradehub/entities/Assignment.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/github/gradehub/entities/Assignment.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/github/gradehub/entities/Course$CourseBuilder.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/github/gradehub/entities/Course$CourseBuilder.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/github/gradehub/entities/Course.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/github/gradehub/entities/Course.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/github/gradehub/entities/CourseGrade$CourseGradeBuilder.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/github/gradehub/entities/CourseGrade$CourseGradeBuilder.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/github/gradehub/entities/CourseGrade.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/github/gradehub/entities/CourseGrade.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/github/gradehub/entities/Grade$GradeBuilder.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/github/gradehub/entities/Grade$GradeBuilder.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/github/gradehub/entities/Grade.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/github/gradehub/entities/Grade.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/github/gradehub/entities/Role$RoleBuilder.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/github/gradehub/entities/Role$RoleBuilder.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/github/gradehub/entities/Role.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/github/gradehub/entities/Role.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/github/gradehub/entities/RoleType.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/github/gradehub/entities/RoleType.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/github/gradehub/entities/Users$UsersBuilder.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/github/gradehub/entities/Users$UsersBuilder.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/github/gradehub/entities/Users.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/github/gradehub/entities/Users.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/github/gradehub/repositories/AssignmentRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/github/gradehub/repositories/AssignmentRepository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/github/gradehub/repositories/CourseGradeRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/github/gradehub/repositories/CourseGradeRepository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/github/gradehub/repositories/CourseRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/github/gradehub/repositories/CourseRepository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/github/gradehub/repositories/GradeRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/github/gradehub/repositories/GradeRepository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/github/gradehub/repositories/RoleRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/github/gradehub/repositories/RoleRepository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/github/gradehub/repositories/UsersRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/github/gradehub/repositories/UsersRepository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/github/gradehub/services/AuthorizationService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/github/gradehub/services/AuthorizationService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/github/gradehub/services/EmailService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/github/gradehub/services/UserService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/github/gradehub/services/UserService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/com/github/gradehub/repositories/BaseTestSetup.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/github/gradehub/repositories/BaseTestSetup.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/com/github/gradehub/services/unitTests/EmailServiceTest.class" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;jhontenorio1618&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/jhontenorio1618/GradeHub.git&quot;,
+    &quot;accountId&quot;: &quot;5ac7a6dd-7786-47d7-9362-77e912652b01&quot;
+  }
+}</component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 8
+}</component>
+  <component name="ProjectId" id="2tstS7alOIHaDQecUa0ZV4usid5" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
+    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
+    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
+    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;Spring Boot.GradeHubApplication.executor&quot;: &quot;Run&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;feature/authorization&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/jhon/GradeHub&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  }
+}</component>
+  <component name="RunManager">
+    <configuration default="true" type="JetRunConfigurationType">
+      <module name="GradeHub" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="PythonConfigurationType" factoryName="Python">
+      <module name="GradeHub" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="GradeHubApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <option name="FRAME_DEACTIVATION_UPDATE_POLICY" value="UpdateClassesAndResources" />
+      <module name="gradehub" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.github.gradehub.GradeHubApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-jdk-9823dce3aa75-b114ca120d71-intellij.indexing.shared.core-IU-242.21829.142" />
+        <option value="bundled-js-predefined-d6986cc7102b-7c0b70fcd90d-JavaScript-IU-242.21829.142" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="00f9a1c3-f0c4-4667-a9a5-24904a8d7742" name="Changes" comment="" />
+      <created>1741152606606</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1741152606606</updated>
+      <workItem from="1741152607895" duration="921000" />
+      <workItem from="1741153586784" duration="5000" />
+      <workItem from="1741196432623" duration="4894000" />
+      <workItem from="1741228188449" duration="182000" />
+      <workItem from="1741234027186" duration="58000" />
+      <workItem from="1741234734989" duration="3578000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>
