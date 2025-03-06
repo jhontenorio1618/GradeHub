@@ -1,4 +1,3 @@
-com/github/gradehub/services/EmailService.class
 com/github/gradehub/entities/CourseGrade.class
 com/github/gradehub/controllers/UserController.class
 com/github/gradehub/repositories/RoleRepository.class
@@ -26,3 +25,4 @@ com/github/gradehub/repositories/CourseRepository.class
 com/github/gradehub/dtos/UserUpdateDTO.class
 com/github/gradehub/GradeHubApplication.class
 com/github/gradehub/repositories/AssignmentRepository.class
+com/github/gradehub/services/UsernameGeneratorService.class

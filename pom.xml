@@ -17,7 +17,7 @@
     <description>GradeHub</description>
 
     <properties>
-        <java.version>17</java.version>
+        <java.version>22</java.version>
         <spring-boot.version>3.4.1</spring-boot.version>
     </properties>
 
