@@ -11,6 +11,7 @@ target/
 *.gz
 *.tar
 *.rar
+*.env
 
 # Ignore OS files
 .DS_Store
