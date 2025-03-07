@@ -1,4 +1,4 @@
 -------------------------------------------------------------------------------
 Test set: com.github.gradehub.repositories.AssignmentRepositoryTest
 -------------------------------------------------------------------------------
-Tests run: 6, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 3.185 s -- in com.github.gradehub.repositories.AssignmentRepositoryTest
+Tests run: 6, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 2.134 s -- in com.github.gradehub.repositories.AssignmentRepositoryTest
