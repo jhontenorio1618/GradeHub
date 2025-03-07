@@ -1,0 +1,27 @@
+# Ignore Maven and IntelliJ IDEA files
+target/
+*.iml
+.idea/
+*.log
+*.class
+*.jar
+*.war
+*.ear
+*.zip
+*.gz
+*.tar
+*.rar
+
+# Ignore OS files
+.DS_Store
+Thumbs.db
+
+# Ignore Logs and Temporary Files
+logs/
+*.log
+hs_err_pid*
+
+# Ignore Spring Boot specific files
+*.properties
+*.yml
+.env
