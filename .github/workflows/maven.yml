@@ -28,7 +28,7 @@ jobs:
         run: mvn -B package --file pom.xml
 
   test:
-    runs-on: ubuntu-latest
+    runs-on: macos-latest-latest
     needs: build
 
     steps:
