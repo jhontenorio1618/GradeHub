@@ -7,6 +7,7 @@
     <list default="true" id="00f9a1c3-f0c4-4667-a9a5-24904a8d7742" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.github/workflows/maven.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.github/workflows/maven.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-com.github.gradehub.GradeHubApplicationTests.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-com.github.gradehub.GradeHubApplicationTests.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-com.github.gradehub.repositories.AssignmentRepositoryTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-com.github.gradehub.repositories.AssignmentRepositoryTest.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-com.github.gradehub.repositories.CourseRepositoryTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-com.github.gradehub.repositories.CourseRepositoryTest.xml" afterDir="false" />
@@ -15,7 +16,6 @@
       <change beforePath="$PROJECT_DIR$/target/surefire-reports/com.github.gradehub.repositories.AssignmentRepositoryTest.txt" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/com.github.gradehub.repositories.AssignmentRepositoryTest.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/surefire-reports/com.github.gradehub.repositories.CourseRepositoryTest.txt" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/com.github.gradehub.repositories.CourseRepositoryTest.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/surefire-reports/com.github.gradehub.repositories.UsersRepositoryTest.txt" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/com.github.gradehub.repositories.UsersRepositoryTest.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/com/github/gradehub/GradeHubApplicationTests.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/github/gradehub/GradeHubApplicationTests.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -124,7 +124,7 @@
       <workItem from="1741228188449" duration="182000" />
       <workItem from="1741234027186" duration="58000" />
       <workItem from="1741234734989" duration="3578000" />
-      <workItem from="1741314689863" duration="6473000" />
+      <workItem from="1741314689863" duration="7067000" />
     </task>
     <servers />
   </component>
