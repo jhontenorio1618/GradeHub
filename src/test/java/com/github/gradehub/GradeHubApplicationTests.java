@@ -14,9 +14,12 @@ class GradeHubApplicationTests {
 
     @BeforeAll
     static void setup() {
-        Dotenv dotenv = Dotenv.load();
-        System.setProperty("TEST_DB_PASSWORD", dotenv.get("TEST_DB_PASSWORD"));
-        System.setProperty("PROD_DB_PASSWORD", dotenv.get("PROD_DB_PASSWORD"));
+        // Only load .env locally
+        if (System.getenv("GITHUB_ACTIONS") == null) {
+            Dotenv dotenv = Dotenv.load();
+            System.setProperty("TEST_DB_PASSWORD", dotenv.get("TEST_DB_PASSWORD", ""));
+            System.setProperty("PROD_DB_PASSWORD", dotenv.get("PROD_DB_PASSWORD", ""));
+        }
     }
 
 }

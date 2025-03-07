@@ -41,9 +41,11 @@ jobs:
           java-version: '17'
           distribution: 'temurin'
           cache: maven
+      - name:
+          Debug: Check If Secret Variables Exist
+        run: |
+          echo "TEST_DB_PASSWORD=${{ secrets.TEST_DB_PASSWORD }}"
 
-      - name: Set Test Database Password
-        run: echo "TEST_DB_PASSWORD=${{ secrets.TEST_DB_PASSWORD }}" >> $GITHUB_ENV
 
       - name: Run Tests
         run: mvn test
